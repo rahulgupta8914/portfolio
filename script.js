@@ -1,4 +1,4 @@
-var toggle = function (e) {
+var toggle = function () {
   document
     .querySelector("#navbarSupportedContent")
     .classList.toggle("collapse");
@@ -12,6 +12,7 @@ var toggle = function (e) {
       var current = document.getElementsByClassName("active")[0];
       current.className = current.className.replace("active", "");
       this.className += " active";
+      toggle()
     });
   }
 })();
